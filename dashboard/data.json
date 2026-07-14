@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-07-10T08:20:59",
+  "totals": {
+    "events": 308,
+    "alerts": 4,
+    "unique_ips": 7
+  },
+  "severity_counts": {
+    "CRITICAL": 2,
+    "MEDIUM": 2
+  },
+  "type_counts": {
+    "BRUTE_FORCE": 2,
+    "ENDPOINT_SCAN": 1,
+    "REQUEST_FLOOD": 1
+  },
+  "top_offending_ips": [
+    [
+      "45.155.205.12",
+      2
+    ],
+    [
+      "91.240.118.33",
+      1
+    ],
+    [
+      "185.220.101.7",
+      1
+    ]
+  ],
+  "source_counts": {
+    "nginx": 225,
+    "ssh": 83
+  },
+  "timeline": [
+    [
+      "2026-07-10T00",
+      81
+    ],
+    [
+      "2026-07-10T01",
+      98
+    ],
+    [
+      "2026-07-10T02",
+      13
+    ],
+    [
+      "2026-07-10T03",
+      48
+    ],
+    [
+      "2026-07-10T05",
+      8
+    ],
+    [
+      "2026-07-10T08",
+      60
+    ]
+  ],
+  "alerts": [
+    {
+      "id": 4,
+      "type": "REQUEST_FLOOD",
+      "ip": "45.155.205.12",
+      "timestamp": "2026-07-10T08:20:19",
+      "severity": "CRITICAL",
+      "message": "45.155.205.12 sent 60 requests to /login (sustained flood, possible credential stuffing/DoS)"
+    },
+    {
+      "id": 3,
+      "type": "BRUTE_FORCE",
+      "ip": "185.220.101.7",
+      "timestamp": "2026-07-10T05:33:55",
+      "severity": "MEDIUM",
+      "message": "8 failed SSH logins from 185.220.101.7 (5 within 60s window)"
+    },
+    {
+      "id": 2,
+      "type": "ENDPOINT_SCAN",
+      "ip": "91.240.118.33",
+      "timestamp": "2026-07-10T03:20:12",
+      "severity": "MEDIUM",
+      "message": "91.240.118.33 probed 10+ distinct endpoints within 30s (recon/scanning behavior)"
+    },
+    {
+      "id": 1,
+      "type": "BRUTE_FORCE",
+      "ip": "45.155.205.12",
+      "timestamp": "2026-07-10T01:23:27",
+      "severity": "CRITICAL",
+      "message": "35 failed SSH logins from 45.155.205.12 (5 within 60s window)"
+    }
+  ]
+}
